@@ -1,0 +1,22 @@
+{
+  "name": "nick-dot-com",
+  "version": "1.0.0",
+  "description": "My dotcom website",
+  "main": "index.html",
+  "dependencies": {
+    "standard": "^14.3.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.9.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
