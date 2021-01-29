@@ -119,10 +119,22 @@
     <main class="main-left">
         <!-- Home Banner -->
         <section id="home" class="home-banner-01 bg-cover bg-left bg-no-repeat mod-section">
-            <div class="container nick-pic bg-no-repeat">
+            <div class="container nick-pic nick-threshold bg-no-repeat">
                 <div class="row full-screen align-items-top p-100px-tb">
                     <div class="col-md-6 align-items-left" style="display:inline;">
-                        <img src="static/img/nick-desktop.png" />
+                        <!-- <img srcset="static/img/nick-desktop.mobile.png,
+                                static/img/nick-desktop-tablet.png 1.5x,
+                                static/img/nick-desktop-alt.png 2x"
+                                src="static/img/nick-desktop.png"
+                                sizes="(max-width: 600px) 480px,
+                                800px" class="responsive-nicks" alt="Nick Lusk"> -->
+                                <picture>
+                                    <source media="(max-width: 576px)" srcset="static/img/nick-mobile.png">
+                                    <source media="(max-width: 768px)" srcset="static/img/nick-tablet.png">
+                                    <source media="(max-width: 992px)" srcset="static/img/nick-desktop-alt.png">
+                                    <source media="(min-width: 1200px)" srcset="static/img/nick-desktop.png">
+                                    <img src="static/img/nick-desktop.png" alt="Nick Lusk">
+                                  </picture>
                     </div>
                     <div class="col-md-6" style="display:inline;">
                         <div class="ht-text mod-mt-75 mod-ml-cop">
