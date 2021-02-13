@@ -29,6 +29,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <!-- plugin CSS -->
+
+
+
     <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/plugin/font-awesome/css/all.min.css" rel="stylesheet">
     <link href="static/plugin/et-line/style.css" rel="stylesheet">
@@ -39,6 +42,141 @@
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <!-- theme css -->
     <link href="static/style/master.css" rel="stylesheet">
+    <!-- <link href="static/min-prime.css" rel="stylesheet"> -->
+
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Righteous&amp;display=swap'>
+  
+    <style>
+    :root {
+      --color-background: #31037D;
+      --axis-x: 1px;
+      --axis-y: 1rem;
+      --delay: 10;
+      --color-black: #000;
+      --color-white: #fff;
+      --color-orange: #D49C3D;
+      --color-red: #D14B3D;
+      --color-violet: #CF52EB;
+      --color-blue: #44A3F7;
+      --color-green: #5ACB3C;
+      --color-yellow: #DEBF40;
+      --color-foreground: var(--color-white);
+      --font-name: Righteous;
+    }
+    
+    /* html, body {
+      font-size: 24px;
+    } */
+    
+    /* body {
+      background-color: var(--color-background);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-name);
+      height: 100vh;
+    } */
+    
+    .c-rainbow {
+      counter-reset: rainbow;
+      position: relative;
+      display: block;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .c-rainbow__layer {
+      --text-color: var(--color-foreground);
+      counter-increment: rainbow;
+      font-size: 7rem;
+      color: var(--text-color);
+      text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
+      animation: rainbow 1.5s ease-in-out infinite;
+    }
+    .c-rainbow__layer:nth-child(1) {
+      animation-delay: calc( 1 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 1);
+      z-index: -10;
+    }
+    .c-rainbow__layer:nth-child(2) {
+      animation-delay: calc( 2 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 2);
+      z-index: -20;
+    }
+    .c-rainbow__layer:nth-child(3) {
+      animation-delay: calc( 3 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 3);
+      z-index: -30;
+    }
+    .c-rainbow__layer:nth-child(4) {
+      animation-delay: calc( 4 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 4);
+      z-index: -40;
+    }
+    .c-rainbow__layer:nth-child(5) {
+      animation-delay: calc( 5 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 5);
+      z-index: -50;
+    }
+    .c-rainbow__layer:nth-child(6) {
+      animation-delay: calc( 6 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 6);
+      z-index: -60;
+    }
+    .c-rainbow__layer:nth-child(7) {
+      animation-delay: calc( 7 / var(--delay) * 1s);
+      left: calc(var(--axis-x) * 7);
+      z-index: -70;
+    }
+    .c-rainbow__layer:not(:first-child) {
+      position: absolute;
+      top: 0;
+    }
+    .c-rainbow__layer--white {
+      --text-color: var(--color-white);
+    }
+    .c-rainbow__layer--orange {
+      --text-color: var(--color-orange);
+    }
+    .c-rainbow__layer--red {
+      --text-color: var(--color-red);
+    }
+    .c-rainbow__layer--violet {
+      --text-color: var(--color-violet);
+    }
+    .c-rainbow__layer--blue {
+      --text-color: var(--color-blue);
+    }
+    .c-rainbow__layer--green {
+      --text-color: var(--color-green);
+    }
+    .c-rainbow__layer--yellow {
+      --text-color: var(--color-yellow);
+    }
+    
+    @keyframes rainbow {
+      0%, 100% {
+        transform: translatey(var(--axis-y));
+      }
+      50% {
+        transform: translatey(calc(var(--axis-y) * -1));
+      }
+    }
+    </style>
+    
+      <script>
+      window.console = window.console || function(t) {};
+    </script>
+    
+      
+      
+      <script>
+      if (document.location.search.match(/type=embed/gi)) {
+        window.parent.postMessage("resize", "*");
+      }
+    </script>
+
 </head>
 <!-- Body Start -->
 
@@ -121,25 +259,19 @@
         <section id="home" class="home-banner-01 bg-cover bg-left bg-no-repeat mod-section">
             <div class="container nick-pic nick-threshold bg-no-repeat">
                 <div class="row full-screen align-items-top p-100px-tb">
-                    <div class="col-md-6 align-items-left" style="display:inline;">
-                        <!-- <img srcset="static/img/nick-desktop.mobile.png,
-                                static/img/nick-desktop-tablet.png 1.5x,
-                                static/img/nick-desktop-alt.png 2x"
-                                src="static/img/nick-desktop.png"
-                                sizes="(max-width: 600px) 480px,
-                                800px" class="responsive-nicks" alt="Nick Lusk"> -->
-                                <picture>
-                                    <source media="(max-width: 576px)" srcset="static/img/nick-mobile.png">
-                                    <source media="(max-width: 768px)" srcset="static/img/nick-tablet.png">
-                                    <source media="(max-width: 992px)" srcset="static/img/nick-desktop-alt.png">
-                                    <source media="(min-width: 1200px)" srcset="static/img/nick-desktop.png">
-                                    <img src="static/img/nick-desktop.png" alt="Nick Lusk">
-                                  </picture>
+                    <div class="col-md-8 align-items-left" style="display:inline;">
+                        <picture>
+                            <source media="(max-width: 576px)" srcset="static/img/nick-mobile.png">
+                            <source media="(max-width: 768px)" srcset="static/img/nick-tablet.png">
+                            <source media="(max-width: 992px)" srcset="static/img/nick-desktop-alt.png">
+                            <source media="(min-width: 1200px)" srcset="static/img/nick-desktop.png">
+                            <img class="lazy" data-src="static/img/nick-desktop.png" alt="Nick Lusk">
+                        </picture>
                     </div>
-                    <div class="col-md-6" style="display:inline;">
+                    <div class="col-md-4" style="display:inline;">
                         <div class="ht-text mod-mt-75 mod-ml-cop">
                             <div id="wrapper">
-                                <div class="street-machine">
+                                <!-- <div class="street-machine">
                                     <h1 class="street">NICK</h1>
                                     <h3 class="machine">Lusk</h3>
                                 </div>
@@ -155,6 +287,50 @@
                                 <div class="btn-bar go-to">
                                     <a class="m-btn m-btn-theme" href="#work">my work</a>
                                     <a class="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
+                                </div> -->
+                            
+                                <div class="row" style="vertical-align: top;">
+
+                                    <ul class="c-rainbow">
+                                        <li class="c-rainbow__layer c-rainbow__layer--white">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--orange">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--red">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--violet">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--blue">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--green">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer--yellow">NICK&nbsp;LUSK</li>
+                                       </ul>
+                                       
+                                             <script id="rendered-js" >
+                                       // generoso.dev
+                                       // Ignore JS
+                                       new Sign().print(document.body);
+                                       //# sourceURL=pen.js
+                                           </script>
+
+                                    <!-- <svg viewBox="0 0 960 300">
+                                        <symbol id="s-text">
+                                            <text text-anchor="middle" x="50%" y="80%">NICK LUSK</text>
+                                        </symbol>
+                                    
+                                        <g class = "g-ants">
+                                            <use xlink:href="#s-text" class="text-copy"></use>
+                                            <use xlink:href="#s-text" class="text-copy"></use>
+                                            <use xlink:href="#s-text" class="text-copy"></use>
+                                            <use xlink:href="#s-text" class="text-copy"></use>
+                                            <use xlink:href="#s-text" class="text-copy"></use>
+                                        </g>
+                                    </svg> -->
+
+
+                                </div>
+                                <div class="row">
+                                    <h2>I Am A <span id="type-it"></span></h2>
+                                    <p>Technology and aesthetics are two things I value a great deal. This is probably why front-end development chose me, and I'm delighted that it did.</p>
+                                    <div class="btn-bar go-to">
+                                        <a class="m-btn m-btn-theme" href="#work">my work</a>
+                                        <a class="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -183,7 +359,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-5 m-15px-tb">
                         <div class="about-me-img box-shadow">
-                            <img src="static/img/belkie-bear-nick-lusk.png" title="" alt="">
+                            <img class="lazy" src="static/img/about-us.jpg" data-src="static/img/belkie-bear-nick-lusk.png" title="Nick Lusk as Belkie Bear" alt="Nick Lusk as Belkie Bear">
                             <div class="nav social-icon">
                                 <a href="https://www.facebook.com/thefearofmusic"><i class="fab fa-facebook-f"></i></a>
                                 <a href="https://twitter.com/NickLusk3"><i class="fab fa-twitter"></i></a>
@@ -643,8 +819,8 @@
                                 <i class="icon-desktop "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Different Layout</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Every Industry</h5>
+                                <p>With a career that has ... several industries ... sure</p>
                             </div>
                         </div>
                     </div>
@@ -656,8 +832,8 @@
                                 <i class="icon-pricetags "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Different Layout</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Technology Agnostic</h5>
+                                <p>I will always like building something with tools to arguing about the merits of tools that are only marginally different.</p>
                             </div>
                         </div>
                     </div>
@@ -683,7 +859,7 @@
                             </div>
                             <div class="feature-content ">
                                 <h5>Responsiveness</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <p>I have been building responsive websites since media queries were a new thing.</p>
                             </div>
                         </div>
                     </div>
@@ -695,7 +871,7 @@
                                 <i class="icon-target "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Testing for Perfection</h5>
+                                <h5>?????????????</h5>
                                 <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
                             </div>
                         </div>
@@ -708,7 +884,7 @@
                                 <i class="icon-tools-2 "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Advanced Options</h5>
+                                <h5>????????????????????</h5>
                                 <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
                             </div>
                         </div>
@@ -735,7 +911,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/southern-company-gas.png" title="Southern Company Gas" alt=" ">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/southern-company-gas.png" title="Southern Company Gas" alt=" ">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Southern Company Gas</h5>
@@ -748,7 +924,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/nick-lusk-emmy-nominated.png" title="Nick Lusk Emmy Nominated" alt="Nick Lusk Emmy Nominated">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/nick-lusk-emmy-nominated.png" title="Nick Lusk Emmy Nominated" alt="Nick Lusk Emmy Nominated">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>EMMY Nomination</h5>
@@ -761,7 +937,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/portfolio-cnn-red.png" title=" " alt=" ">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/portfolio-cnn-red.png" title=" " alt=" ">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>CNN Redesigns</h5>
@@ -774,7 +950,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/portfolio-cnn-white.png" title=" " alt=" ">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/portfolio-cnn-white.png" title=" " alt=" ">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Alex Chilton</h5>
@@ -787,7 +963,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/blackbird-records-the-stonesouls.jpg" title="Blackbird Records" alt="Blackbird Records">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/blackbird-records-the-stonesouls.jpg" title="Blackbird Records" alt="Blackbird Records">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Blackbird Records</h5>
@@ -800,7 +976,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/sorry-ma-forgot-to-let-out-the-cat.png" title="Played on two albums" alt="Played on two albums">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/sorry-ma-forgot-to-let-out-the-cat.png" title="Played on two albums" alt="Played on two albums">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Played on two albums</h5>
@@ -813,7 +989,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/why-six-days-unreleased.png" title="Album Producer - Why Six Days" alt="I produced an album for the South Carolina band Why Six Days. It was never officially released.">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/why-six-days-unreleased.png" title="Album Producer - Why Six Days" alt="I produced an album for the South Carolina band Why Six Days. It was never officially released.">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Album Producer</h5>
@@ -826,7 +1002,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/highly-effected.jpg" title="Highly Effected, LLC" alt="Highly Effected, LLC">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/highly-effected.jpg" title="Highly Effected, LLC" alt="Highly Effected, LLC">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Highly Effected, LLC</h5>
@@ -839,7 +1015,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/swrx.png" title="Secureworks Employee of the Month Nominee" alt="Secureworks Employee of the Month Nominee">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/swrx.png" title="Secureworks Employee of the Month Nominee" alt="Secureworks Employee of the Month Nominee">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Employee of the Month<br />Nomination</h5>
@@ -852,7 +1028,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/dell-everyday-hero.png" title="Dell Everyday Hero" alt="Dell Everyday Hero">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/dell-everyday-hero.png" title="Dell Everyday Hero" alt="Dell Everyday Hero">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Dell Everyday Hero</h5>
@@ -865,7 +1041,7 @@
                     <div class="grid-item product branding ">
                         <div class="portfolio-box-01 ">
                             <div class="portfolio-img ">
-                                <img src="static/img/OPX/swrx.png" title="Secureworks Greenie Award" alt="Secureworks Greenie Award">
+                                <img class="lazy" src ="static/img/portfolio-1.jpg" data-src="static/img/OPX/swrx.png" title="Secureworks Greenie Award" alt="Secureworks Greenie Award">
                             </div>
                             <div class="portfolio-info ">
                                 <h5>Greenie Award</h5>
@@ -887,7 +1063,7 @@
                     <div class="col-md-12">
                         <div class="section-title">
                             <h3 class="dark-color text-uppercase">Testimonials</h3>
-                            <p class="text-uppercase small">I like people a lot, and they often like me too</p>
+                            <p class="text-uppercase small">These are re-posted from my <a href="https://www.linkedin.com/in/nicklusk/en">LinkedIn</a> page.</p>
                         </div>
                     </div>
                 </div>
@@ -898,7 +1074,7 @@
                             <div class="testimonial-col-01">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="static/img/avatra-1.jpg" title="" alt="">
+                                        <img class="lazy" data-src="static/img/people/avatra-katherine.jpg" src="static/img/avatra-1.jpg" title="" alt="">
                                     </div>
                                     <div class="media-body p-25px-l">
                                         <p>Nick is extremely hard-working, calm, knowledgeable and flexible. He had good relationships with everyone in the newsroom and was an invaluable resource for the whole team.</p>
@@ -914,7 +1090,23 @@
                             <div class="testimonial-col-01">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="static/img/avatra-1.jpg" title="" alt="">
+                                        <img class="lazy" data-src="static/img/people/avatra-michael.jpg" src="static/img/avatra-1.jpg" title="" alt="">
+                                    </div>
+                                    <div class="media-body p-25px-l">
+                                        <p>Having worked with Nick for over half a decade, I believe I can speak well to his character. He has both an attention to detail and a drive to follow through with things, two skills that are priceless in today's fast-moving business world. But what perhaps has impressed me the most is his pursuit of a continued education, translating into a continuous growth of his developer skills.</p>
+                                        <div class="tc-info">
+                                            <h6 class="font-alt dark-color font-w-600">Michael Botelho</h6>
+                                            <span>Lead Software Developer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / -->
+                            <!-- testimonials -->
+                            <div class="testimonial-col-01">
+                                <div class="media">
+                                    <div class="img">
+                                        <img class="lazy" data-src="static/img/people/avatra-julie.jpg" src="static/img/avatra-1.jpg" title="" alt="">
                                     </div>
                                     <div class="media-body p-25px-l">
                                         <p>Nick is a very knowledgeable and resourceful web developer with deep technical skills. He can troubleshoot and resolve potential issues before they impact web performance. He is passionate about his work and continually
@@ -931,7 +1123,23 @@
                             <div class="testimonial-col-01">
                                 <div class="media">
                                     <div class="img">
-                                        <img src="static/img/avatra-1.jpg" title="" alt="">
+                                        <img class="lazy" data-src="static/img/people/avatra-carrie.jpg" src="static/img/avatra-1.jpg" title="" alt="">
+                                    </div>
+                                    <div class="media-body p-25px-l">
+                                        <p>Nick is a creative and enthusiastic developer who thrives on discovering new ideas and solutions. His passion and out-of-the-box thinking make him unique and valuable on a software development team. The UI work I’ve seen him do is imaginative, intuitive, and attractive. He is a diligent worker who will pour all he’s got into a project to make it the best it can be. Nick is no run-of-the-mill developer - he brings a fresh perspective to any development project.</p>
+                                        <div class="tc-info">
+                                            <h6 class="font-alt dark-color font-w-600">Carrie O'Brien</h6>
+                                            <span>Software Developer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- / -->
+                            <!-- testimonials -->
+                            <div class="testimonial-col-01">
+                                <div class="media">
+                                    <div class="img">
+                                        <img class="lazy" data-src="static/img/people/avatra-michelle.jpg" src="static/img/avatra-1.jpg" title="" alt="">
                                     </div>
                                     <div class="media-body p-25px-l">
                                         <p>Nick is not only a precise and reliable expert but also has ingenious web programming skills with an eye for detail. Through the various projects we’ve worked on together, he consistently impressed me with his detailed
@@ -985,7 +1193,7 @@
                         <div class="blog-grid ">
                             <div class="blog-grid-img ">
                                 <a href="https://www.youtube.com/watch?v=Gx1Snr6sX6g&ab_channel=HighlyEffected">
-                                    <img src="static/img/blog-ibanez-dl5.jpg " title=" " alt=" ">
+                                    <img class="lazy" data-src="static/img/blog-ibanez-dl5.jpg " title=" " alt=" ">
                                 </a>
                             </div>
                             <div class="blog-gird-info ">
@@ -1006,7 +1214,7 @@
                         <div class="blog-grid ">
                             <div class="blog-grid-img ">
                                 <a href="# ">
-                                    <img src="static/img/blog-1.jpg " title=" " alt=" ">
+                                    <img class="lazy" data-src="static/img/blog-1.jpg " title=" " alt=" ">
                                 </a>
                             </div>
                             <div class="blog-gird-info ">
@@ -1027,7 +1235,7 @@
                         <div class="blog-grid ">
                             <div class="blog-grid-img ">
                                 <a href="# ">
-                                    <img src="static/img/blog-1.jpg " title=" " alt=" ">
+                                    <img class="lazy" data-src="static/img/blog-1.jpg " title=" " alt=" ">
                                 </a>
                             </div>
                             <div class="blog-gird-info ">
@@ -1145,10 +1353,10 @@
             <div class="row align-items-center ">
                 <div class="col-md-6 m-10px-tb ">
                     <div class="nav justify-content-center justify-content-md-start ">
-                        <a href="# "><i class="fab fa-facebook-f "></i></a>
+                        <a href="https://www.facebook.com/thefearofmusic"><i class="fab fa-facebook-f"></i></a>
                         <!-- <a href="# "><i class="fab fa-twitter "></i></a> -->
-                        <a href="# "><i class="fab fa-instagram "></i></a>
-                        <a href="# "><i class="fab fa-linkedin-in "></i></a>
+                        <a href="https://www.instagram.com/afearofmusic/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nicklusk/en"><i class="fab fa-linkedin-in"></i></a>
                         <!-- <a href="# "><i class="fab fa-pinterest "></i></a> -->
                     </div>
                 </div>
@@ -1160,28 +1368,57 @@
     </footer>
     <!-- footer End -->
     <!-- jquery -->
-    <script src="static/js/jquery-3.2.1.min.js "></script>
-    <script src="static/js/jquery-migrate-3.0.0.min.js "></script>
+    <!-- <script src="static/js/jquery-3.2.1.min.js "></script>
+    <script src="static/js/jquery-migrate-3.0.0.min.js "></script> -->
     <!-- end jquery -->
+    <!--lazy load-->
+    <!-- <script src="static/plugin/jquery.lazy-master/jquery.lazy.min.js"></script>
+    <script src="static/plugin/jquery.lazy-master/jquery.lazy.plugins.min.js"></script> -->
+    <!-- end -->
     <!-- appear -->
-    <script src="static/plugin/appear/jquery.appear.js "></script>
+    <!-- <script src="static/plugin/appear/jquery.appear.min.js "></script> -->
     <!-- end appear -->
     <!--bootstrap-->
-    <script src="static/plugin/bootstrap/js/popper.min.js "></script>
-    <script src="static/plugin/bootstrap/js/bootstrap.js "></script>
+    <!-- <script src="static/plugin/bootstrap/js/popper.min.js "></script>
+    <script src="static/plugin/bootstrap/js/bootstrap.min.js "></script> -->
     <!--end bootstrap-->
     <!--taphover-->
     <!-- <script src="static/plugin/hnl.taphover.js"></script> -->
     <!-- end -->
     <!-- End -->
     <!-- custom js -->
-    <script src="static/js/custom.js "></script>
-    <script src="static/js/mail_send.js "></script>
+    <!-- <script src="static/js/custom.min.js "></script>
+    <script src="static/js/mail_send.min.js "></script> -->
     <!-- end -->
     <!-- end body -->
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script> Splitting(); </script>
+<!-- <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+<script> Splitting(); </script> -->
 
+    <!-- footer End -->
+    <!-- jquery -->
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+    <!-- end jquery -->
+    <!--lazy load-->
+    <script src="static/plugin/jquery.lazy-master/jquery.lazy.min.js"></script>
+    <script src="static/plugin/jquery.lazy-master/jquery.lazy.plugins.min.js"></script>
+    <!-- end -->
+    <!-- appear -->
+    <script src="static/plugin/appear/jquery.appear.js"></script>
+    <!-- end appear -->
+    <!--bootstrap-->
+    <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+    <script src="static/plugin/bootstrap/js/bootstrap.js"></script>
+    <!--end bootstrap-->
+    <!-- End -->
+    <!-- custom js -->
+    <script src="static/js/custom.js"></script>
+    <script src="static/js/mail_send.js"></script>
+    <!-- end -->
+    <!-- end body -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script> Splitting();</script>
+    <script> new Sign().print(document.body)</script>
 </body>
 
 </html>

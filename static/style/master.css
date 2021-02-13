@@ -6585,6 +6585,8 @@ h6 {
 * Nick Lusk Mods
 ----------------------------------*/
 
+
+
 .mod-section {
     background-image: url(../../static/img/BlueGridOne.gif);
     background-repeat: no-repeat;
@@ -6656,7 +6658,7 @@ h6 {
         background-position: 420px 0;
     }
 }
-
+/* 
 .chrome {
     position: relative;
     background-image: -webkit-linear-gradient(#0097ff 20%, #00cffb 46%, #ffffff 50%, #4745e4 54%, #8988ee 58%, #0012a6 90%, #5bfbd8 100%);
@@ -6681,7 +6683,7 @@ h6 {
     -webkit-background-clip: text;
     -webkit-text-stroke: 0;
     /* padding-right: 580px; */
-    -webkit-animation-name: chrome_effect;
+    /* -webkit-animation-name: chrome_effect;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 4s;
     -webkit-animation-timing-function: linear;
@@ -6741,11 +6743,11 @@ h6 {
     font-family: 'Mr Dafoe', cursive;
     font-size: 130px;
     transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg); */
     /* IE 9 */
-    -webkit-transform: rotate(-15deg);
+    /* -webkit-transform: rotate(-15deg); */
     /* Safari and Chrome */
-    color: #8988ee;
+    /* color: #8988ee;
     margin: 0;
     margin-top: -160px;
     padding-left: 430px;
@@ -6763,12 +6765,12 @@ h6 {
     font-size: 160px;
     color: #4745e4;
     transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg); */
     /* IE 9 */
-    -webkit-transform: rotate(-15deg);
+    /* -webkit-transform: rotate(-15deg); */
     /* Safari and Chrome */
     /* margin-left: 300px; */
-    margin-top: -120px;
+    /* margin-top: -120px;
     -webkit-text-stroke: 1px #00cffb;
     -webkit-filter: drop-shadow(2px 2px 20px #00cffb);
     z-index: 20;
@@ -6785,9 +6787,9 @@ h6 {
     line-height: 1;
     margin: 0;
     margin-top: -95px;
-    padding-left: 80px;
+    padding-left: 80px; */
     /* font-weight: normal; */
-    background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
+    /* background-image: -webkit-linear-gradient(#022486 0%, #0AD0FD 30%, #BDFCFC 40%, #D8FFFF 44%, #00081C 44%, #00081C 50%, #074A67 52%, #1CD8FE 60%, #7FEDFE 62%, #96F5FC 70%, #0FD8FA 73%, #0BD2FD 88%, #AFFDFF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #fff;
@@ -6935,6 +6937,262 @@ h6 {
         top: 52px;
         opacity: 0;
     }
-}
+}  */
 
 /*# sourceMappingURL=master.css.map */
+
+/* Main styles */
+/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:800);
+
+.text {
+  fill: none;
+  stroke-width: 12;
+  stroke-linejoin: round;
+  stroke-dasharray: 70 330;
+  stroke-dashoffset: 0;
+  -webkit-animation: stroke 6s infinite linear;
+  animation: stroke 6s infinite linear;
+}
+
+.text:nth-child(5n + 1) {
+  stroke: #4745e4 ;
+  -webkit-animation-delay: -1.2s;
+  animation-delay: -1.2s;
+}
+.text:nth-child(5n + 2) {
+  stroke: #0012a6;
+  -webkit-animation-delay: -2.4s;
+  animation-delay: -2.4s;
+}
+
+.text:nth-child(5n + 3) {
+  stroke: #5bfbd8;
+  -webkit-animation-delay: -3.6s;
+  animation-delay: -3.6s;
+}
+
+.text:nth-child(5n + 4) {
+  stroke: #00cffb;
+  -webkit-animation-delay: -4.8s;
+  animation-delay: -4.8s;
+}
+
+.text:nth-child(5n + 5) {
+  stroke: #0097ff;
+  -webkit-animation-delay: -6s;
+  animation-delay: -6s;
+}
+
+@-webkit-keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: -400;
+  }
+} */
+
+/* Other styles */
+/* html, body {
+  height: 100%;
+}
+
+body {
+  background: #111;
+  background-size: .2em 100%;
+  font: 14.5em/1 Open Sans, Impact;
+  text-transform: uppercase;
+  margin: 0;
+} */
+
+/* .putz {
+    font: 14.5em/1 Open Sans, Impact;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+/* 
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+  height: 100%;
+  font-weight: 800;
+}
+
+body{
+  background: #030321;
+  font-family: Arial;
+}
+
+svg {
+    display: block;
+    font: 20.5em Open Sans, Impact;
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #022486;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #0AD0FD;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #074A67;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #1CD8FE;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #96F5FC;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+} */
+
+/* 
+:root {
+    --color-background: #31037D;
+    --axis-x: 1px;
+    --axis-y: 1rem;
+    --delay: 10;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-orange: #D49C3D;
+    --color-red: #D14B3D;
+    --color-violet: #CF52EB;
+    --color-blue: #44A3F7;
+    --color-green: #5ACB3C;
+    --color-yellow: #DEBF40;
+    --color-foreground: var(--color-white);
+    --font-name: Righteous;
+  }
+  
+  html, body {
+    font-size: 24px;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-name);
+    height: 100vh;
+  }
+  
+  .c-rainbow {
+    counter-reset: rainbow;
+    position: relative;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .c-rainbow__layer {
+    --text-color: var(--color-foreground);
+    counter-increment: rainbow;
+    font-size: 3rem;
+    color: var(--text-color);
+    text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
+    animation: rainbow 1.5s ease-in-out infinite;
+  }
+  .c-rainbow__layer:nth-child(1) {
+    animation-delay: calc( 1 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 1);
+    z-index: -10;
+  }
+  .c-rainbow__layer:nth-child(2) {
+    animation-delay: calc( 2 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 2);
+    z-index: -20;
+  }
+  .c-rainbow__layer:nth-child(3) {
+    animation-delay: calc( 3 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 3);
+    z-index: -30;
+  }
+  .c-rainbow__layer:nth-child(4) {
+    animation-delay: calc( 4 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 4);
+    z-index: -40;
+  }
+  .c-rainbow__layer:nth-child(5) {
+    animation-delay: calc( 5 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 5);
+    z-index: -50;
+  }
+  .c-rainbow__layer:nth-child(6) {
+    animation-delay: calc( 6 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 6);
+    z-index: -60;
+  }
+  .c-rainbow__layer:nth-child(7) {
+    animation-delay: calc( 7 / var(--delay) * 1s);
+    left: calc(var(--axis-x) * 7);
+    z-index: -70;
+  }
+  .c-rainbow__layer:not(:first-child) {
+    position: absolute;
+    top: 0;
+  }
+  .c-rainbow__layer--white {
+    --text-color: var(--color-white);
+  }
+  .c-rainbow__layer--orange {
+    --text-color: var(--color-orange);
+  }
+  .c-rainbow__layer--red {
+    --text-color: var(--color-red);
+  }
+  .c-rainbow__layer--violet {
+    --text-color: var(--color-violet);
+  }
+  .c-rainbow__layer--blue {
+    --text-color: var(--color-blue);
+  }
+  .c-rainbow__layer--green {
+    --text-color: var(--color-green);
+  }
+  .c-rainbow__layer--yellow {
+    --text-color: var(--color-yellow);
+  }
+  
+  @keyframes rainbow {
+    0%, 100% {
+      transform: translatey(var(--axis-y));
+    }
+    50% {
+      transform: translatey(calc(var(--axis-y) * -1));
+    }
+  }
+   */
+  /*# sourceMappingURL=rainbow.css.map */
+  

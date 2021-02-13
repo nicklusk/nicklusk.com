@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <script src="https://unpkg.com/pill@1/dist/pill.min.js"></script>
+        <style>
+        /* global styles */
+        #indicator {
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="indicator">Loading...</div>
+        <div id="content">
+        <style>/* page styles */</style>
+    
+        <!-- page content here -->
+        </div>
+        <script>
+        const indicator = document.querySelector('#indicator')
+    
+        pill('#content', {
+            onLoading() {
+            // Show loading indicator
+            indicator.style.display = 'initial'
+            },
+            onReady() {
+            // Hide loading indicator
+            indicator.style.display = 'none'
+            }
+        })
+        </script>
+    </body>
+</html>

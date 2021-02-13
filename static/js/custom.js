@@ -396,9 +396,9 @@
         }
     }
 
-    /* ---------------------------------------------- /*
-           * All Functions
-          /* ---------------------------------------------- */
+    /* --------------------
+              * All Functions
+          ---------------------- */
     // loadScript
     var _arr = {}
 
@@ -453,4 +453,17 @@
     $(window).on('resize', function() {
         NAY.HeaderHeight()
     })
+
+    // Lazy Loader
+    $(function() {
+        $('.lazy').lazy()
+    });
+    $('.lazy').Lazy({
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
 })(jQuery)
