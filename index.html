@@ -34,148 +34,17 @@
 
     <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/plugin/font-awesome/css/all.min.css" rel="stylesheet">
-    <link href="static/plugin/et-line/style.css" rel="stylesheet">
-    <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+    <link href="static/plugin/et-line/style.min.css" rel="stylesheet">
+    <link href="static/plugin/themify-icons/themify-icons.min.css" rel="stylesheet">
     <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
-    <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
-    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link href="static/plugin/magnific/magnific-popup.min.css" rel="stylesheet">
     <!-- theme css -->
     <link href="static/style/master.css" rel="stylesheet">
     <!-- <link href="static/min-prime.css" rel="stylesheet"> -->
 
 
-    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Righteous&amp;display=swap'>
-  
-    <style>
-    :root {
-      --color-background: #31037D;
-      --axis-x: 1px;
-      --axis-y: 1rem;
-      --delay: 10;
-      --color-black: #000;
-      --color-white: #fff;
-      --color-orange: #D49C3D;
-      --color-red: #D14B3D;
-      --color-violet: #CF52EB;
-      --color-blue: #44A3F7;
-      --color-green: #5ACB3C;
-      --color-yellow: #DEBF40;
-      --color-foreground: var(--color-white);
-      --font-name: Righteous;
-    }
     
-    /* html, body {
-      font-size: 24px;
-    } */
-    
-    /* body {
-      background-color: var(--color-background);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-name);
-      height: 100vh;
-    } */
-    
-    .c-rainbow {
-      counter-reset: rainbow;
-      position: relative;
-      display: block;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .c-rainbow__layer {
-      --text-color: var(--color-foreground);
-      counter-increment: rainbow;
-      font-size: 7rem;
-      color: var(--text-color);
-      text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
-      animation: rainbow 1.5s ease-in-out infinite;
-    }
-    .c-rainbow__layer:nth-child(1) {
-      animation-delay: calc( 1 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 1);
-      z-index: -10;
-    }
-    .c-rainbow__layer:nth-child(2) {
-      animation-delay: calc( 2 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 2);
-      z-index: -20;
-    }
-    .c-rainbow__layer:nth-child(3) {
-      animation-delay: calc( 3 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 3);
-      z-index: -30;
-    }
-    .c-rainbow__layer:nth-child(4) {
-      animation-delay: calc( 4 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 4);
-      z-index: -40;
-    }
-    .c-rainbow__layer:nth-child(5) {
-      animation-delay: calc( 5 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 5);
-      z-index: -50;
-    }
-    .c-rainbow__layer:nth-child(6) {
-      animation-delay: calc( 6 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 6);
-      z-index: -60;
-    }
-    .c-rainbow__layer:nth-child(7) {
-      animation-delay: calc( 7 / var(--delay) * 1s);
-      left: calc(var(--axis-x) * 7);
-      z-index: -70;
-    }
-    .c-rainbow__layer:not(:first-child) {
-      position: absolute;
-      top: 0;
-    }
-    .c-rainbow__layer--white {
-      --text-color: var(--color-white);
-    }
-    .c-rainbow__layer--orange {
-      --text-color: var(--color-orange);
-    }
-    .c-rainbow__layer--red {
-      --text-color: var(--color-red);
-    }
-    .c-rainbow__layer--violet {
-      --text-color: var(--color-violet);
-    }
-    .c-rainbow__layer--blue {
-      --text-color: var(--color-blue);
-    }
-    .c-rainbow__layer--green {
-      --text-color: var(--color-green);
-    }
-    .c-rainbow__layer--yellow {
-      --text-color: var(--color-yellow);
-    }
-    
-    @keyframes rainbow {
-      0%, 100% {
-        transform: translatey(var(--axis-y));
-      }
-      50% {
-        transform: translatey(calc(var(--axis-y) * -1));
-      }
-    }
-    </style>
-    
-      <script>
-      window.console = window.console || function(t) {};
-    </script>
-    
-      
-      
-      <script>
-      if (document.location.search.match(/type=embed/gi)) {
-        window.parent.postMessage("resize", "*");
-      }
-    </script>
+
 
 </head>
 <!-- Body Start -->
@@ -270,27 +139,8 @@
                     </div>
                     <div class="col-md-4" style="display:inline;">
                         <div class="ht-text mod-mt-75 mod-ml-cop">
-                            <div id="wrapper">
-                                <!-- <div class="street-machine">
-                                    <h1 class="street">NICK</h1>
-                                    <h3 class="machine">Lusk</h3>
-                                </div>
-                                <script>
-                                    if (navigator.platform.indexOf('Win') != -1) {
-                                        window.document.getElementById("wrapper").setAttribute("class", "windows");
-                                    } else if (navigator.platform.indexOf('Mac') != -1) {
-                                        window.document.getElementById("wrapper").setAttribute("class", "mac");
-                                    }
-                                </script>
-                                <h2>I Am A <span id="type-it"></span></h2>
-                                <p>Technology and aesthetics are two things I value a great deal. This is probably why front-end development chose me, and I'm delighted that it did.</p>
-                                <div class="btn-bar go-to">
-                                    <a class="m-btn m-btn-theme" href="#work">my work</a>
-                                    <a class="m-btn m-btn-t-theme" href="#contactus">Hire Me</a>
-                                </div> -->
-                            
+                            <div id="wrapper">                            
                                 <div class="row" style="vertical-align: top;">
-
                                     <ul class="c-rainbow">
                                         <li class="c-rainbow__layer c-rainbow__layer--white">NICK&nbsp;LUSK</li>
                                         <li class="c-rainbow__layer c-rainbow__layer--orange">NICK&nbsp;LUSK</li>
@@ -299,30 +149,7 @@
                                         <li class="c-rainbow__layer c-rainbow__layer--blue">NICK&nbsp;LUSK</li>
                                         <li class="c-rainbow__layer c-rainbow__layer--green">NICK&nbsp;LUSK</li>
                                         <li class="c-rainbow__layer c-rainbow__layer--yellow">NICK&nbsp;LUSK</li>
-                                       </ul>
-                                       
-                                             <script id="rendered-js" >
-                                       // generoso.dev
-                                       // Ignore JS
-                                       new Sign().print(document.body);
-                                       //# sourceURL=pen.js
-                                           </script>
-
-                                    <!-- <svg viewBox="0 0 960 300">
-                                        <symbol id="s-text">
-                                            <text text-anchor="middle" x="50%" y="80%">NICK LUSK</text>
-                                        </symbol>
-                                    
-                                        <g class = "g-ants">
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                            <use xlink:href="#s-text" class="text-copy"></use>
-                                        </g>
-                                    </svg> -->
-
-
+                                    </ul>
                                 </div>
                                 <div class="row">
                                     <h2>I Am A <span id="type-it"></span></h2>
@@ -567,6 +394,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-6 m-15px-tb">
+                                <div class="feature-box-2 media align-items-center">
+                                    <div class="icon">
+                                        <i class="fas fa-flag"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>Docker</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 m-15px-tb">
+                                <div class="feature-box-2 media align-items-center">
+                                    <div class="icon">
+                                        <i class="fas fa-flag"></i>
+                                    </div>
+                                    <div class="media-body">
+                                        <h5>BASH/UNIX</h5>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -806,7 +653,7 @@
                 <div class="row sm-m-25px-b m-35px-b ">
                     <div class="col-md-12 ">
                         <div class="section-title ">
-                            <h3 class="dark-color text-uppercase ">My Services</h3>
+                            <h3 class="dark-color text-uppercase ">My Qualities</h3>
                             <p class="text-uppercase small ">A Lead UX & UI designer based in Canada</p>
                         </div>
                     </div>
@@ -816,24 +663,24 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb ">
                         <div class="feature-box-1 box-shadow-lg ">
                             <div class="icon ">
+                                <i class="icon-compass "></i>
+                            </div>
+                            <div class="feature-content ">
+                                <h5>Any Industry</h5>
+                                <p>I've worked as a front-end developer in several different industries. I believe I can utilize my talents in any industry.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / -->
+                    <!-- feaure box -->
+                    <div class="col-sm-6 col-lg-4 m-15px-tb ">
+                        <div class="feature-box-1 box-shadow-lg ">
+                            <div class="icon ">
                                 <i class="icon-desktop "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Every Industry</h5>
-                                <p>With a career that has ... several industries ... sure</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / -->
-                    <!-- feaure box -->
-                    <div class="col-sm-6 col-lg-4 m-15px-tb ">
-                        <div class="feature-box-1 box-shadow-lg ">
-                            <div class="icon ">
-                                <i class="icon-pricetags "></i>
-                            </div>
-                            <div class="feature-content ">
                                 <h5>Technology Agnostic</h5>
-                                <p>I will always like building something with tools to arguing about the merits of tools that are only marginally different.</p>
+                                <p>I don't favor any one set of tools or technology and can adapt to the situation with minimal friction.</p>
                             </div>
                         </div>
                     </div>
@@ -842,37 +689,37 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb ">
                         <div class="feature-box-1 box-shadow-lg ">
                             <div class="icon ">
-                                <i class="icon-chat "></i>
+                                <i class="icon-magnifying-glass "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>Make it Simple</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Optimization</h5>
+                                <p>Slow websites and bad search results are unacceptable. Optimization is a mandatory part of any web project.</p>
                             </div>
                         </div>
                     </div>
                     <!-- / -->
                     <!-- feaure box -->
-                    <div class="col-sm-6 col-lg-4 m-15px-tb ">
+                    <!-- <div class="col-sm-6 col-lg-4 m-15px-tb ">
                         <div class="feature-box-1 box-shadow-lg ">
                             <div class="icon ">
-                                <i class="icon-mobile "></i>
+                                <i class="icon-grid "></i>
                             </div>
                             <div class="feature-content ">
                                 <h5>Responsiveness</h5>
                                 <p>I have been building responsive websites since media queries were a new thing.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- / -->
                     <!-- feaure box -->
                     <div class="col-sm-6 col-lg-4 m-15px-tb ">
                         <div class="feature-box-1 box-shadow-lg ">
                             <div class="icon ">
-                                <i class="icon-target "></i>
+                                <i class="icon-gears "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>?????????????</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Team Member</h5>
+                                <p>Being part of a team raises the potential of everything.</p>
                             </div>
                         </div>
                     </div>
@@ -881,11 +728,11 @@
                     <div class="col-sm-6 col-lg-4 m-15px-tb ">
                         <div class="feature-box-1 box-shadow-lg ">
                             <div class="icon ">
-                                <i class="icon-tools-2 "></i>
+                                <i class="icon-piechart "></i>
                             </div>
                             <div class="feature-content ">
-                                <h5>????????????????????</h5>
-                                <p>I design and develop services for customers of all sizes, specializing in creating stylish, modern websites.</p>
+                                <h5>Data Driven</h5>
+                                <p>The buzz around data shows little sign of waning, and for good reason. We can get instant feedback and respond to it swiftly.</p>
                             </div>
                         </div>
                     </div>
@@ -1220,10 +1067,10 @@
                             <div class="blog-gird-info ">
                                 <div class="b-meta ">
                                     <span class="date ">02 Mar 2019</span>
-                                    <span class="meta ">Design</span>
+                                    <span class="meta ">Reading</span>
                                 </div>
-                                <h5><a href="# ">Make your Marketing website</a></h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <h5><a href="# ">We built a Little Free Library</a></h5>
+                                <p>The very first Little Free Library in Rolesville, NC.</p>
                                 <div class="btn-grid ">
                                     <a class="m-btn-link " href="# ">Read More</a>
                                 </div>
@@ -1366,33 +1213,6 @@
             </div>
         </div>
     </footer>
-    <!-- footer End -->
-    <!-- jquery -->
-    <!-- <script src="static/js/jquery-3.2.1.min.js "></script>
-    <script src="static/js/jquery-migrate-3.0.0.min.js "></script> -->
-    <!-- end jquery -->
-    <!--lazy load-->
-    <!-- <script src="static/plugin/jquery.lazy-master/jquery.lazy.min.js"></script>
-    <script src="static/plugin/jquery.lazy-master/jquery.lazy.plugins.min.js"></script> -->
-    <!-- end -->
-    <!-- appear -->
-    <!-- <script src="static/plugin/appear/jquery.appear.min.js "></script> -->
-    <!-- end appear -->
-    <!--bootstrap-->
-    <!-- <script src="static/plugin/bootstrap/js/popper.min.js "></script>
-    <script src="static/plugin/bootstrap/js/bootstrap.min.js "></script> -->
-    <!--end bootstrap-->
-    <!--taphover-->
-    <!-- <script src="static/plugin/hnl.taphover.js"></script> -->
-    <!-- end -->
-    <!-- End -->
-    <!-- custom js -->
-    <!-- <script src="static/js/custom.min.js "></script>
-    <script src="static/js/mail_send.min.js "></script> -->
-    <!-- end -->
-    <!-- end body -->
-<!-- <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script> Splitting(); </script> -->
 
     <!-- footer End -->
     <!-- jquery -->
@@ -1416,9 +1236,14 @@
     <script src="static/js/mail_send.js"></script>
     <!-- end -->
     <!-- end body -->
-    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-    <script> Splitting();</script>
-    <script> new Sign().print(document.body)</script>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+    </script>
 </body>
 
 </html>
