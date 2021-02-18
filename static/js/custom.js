@@ -219,6 +219,7 @@
                     autoplay: $autoplay,
                     autoplayHoverPause: true   
                 });
+                $('.owl-carousel').owlCarousel({ autoWidth: true }).trigger('refresh.owl.carousel');
            }); 
          });
       }
@@ -372,26 +373,26 @@
 	// Window on Load
 	$(window).on("load", function(){
 		NAY.masonry(),
-		NAY.PreLoad();
+		NAY.PreLoad(),
+		NAY.Owl();
 	});
 	// Document on Ready
 	$(document).on("ready", function(){				
-    NAY.particles(),
-    NAY.VideoBG(),
+        NAY.particles(),
+        NAY.VideoBG(),
 		NAY.HeaderFixd(),
 		NAY.OnePage(),
 		NAY.OnePageTop(),
 		NAY.Accordion(),
 		NAY.Counter(),
 		NAY.MenuClose(),
-    NAY.MenuTogglerClose(),
+        NAY.MenuTogglerClose(),
 		NAY.Gallery(),
 		NAY.SearchBox(),
 		NAY.HeaderHeight(),
 		NAY.MegaMenu(),
 		NAY.ProgressBar(),
-		NAY.mTypeIt(),
-		NAY.Owl();
+		NAY.mTypeIt();
 	});
 
 	// Document on Scrool

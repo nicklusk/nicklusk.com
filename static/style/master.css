@@ -6601,12 +6601,10 @@ h6 {
     height: auto;
 }
 
-.nick-threshold {
-    max-height: 1056px;
-}
+/* .nick-threshold {
+    max-height: 1007px;
+} */
 .nick-pic {
-    /* background-image: url(../../static/img/home-banner-match-color-eraser-full.png);
-    background-size: 800px 1067px; */
     margin-left: -15px;
     background-position: left bottom;
 }
@@ -6674,11 +6672,36 @@ h6 {
     padding: 0;
     margin: 0;
   }
+
+  @media (min-width: 576px) {
+    .c-rainbow__layer-font {
+        font-size: 5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .c-rainbow__layer-font {
+        font-size: 5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .c-rainbow__layer-font {
+        font-size: 7rem;
+      }
+  }
+  
+  @media (min-width: 1200px) {
+    .c-rainbow__layer-font {
+        font-size: 7rem;
+      }
+  }
+
   .c-rainbow__layer {
     font-family: 'Righteous';
     --text-color: var(--color-foreground);
     counter-increment: rainbow;
-    font-size: 7rem;
+    /* font-size: 7rem; */
     color: var(--text-color);
     text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
     animation: rainbow 1.5s ease-in-out infinite;
@@ -6751,4 +6774,77 @@ h6 {
     50% {
       transform: translatey(calc(var(--axis-y) * -1));
     }
+  }
+
+    /* --- responsive banner picture --- */
+
+  @media (min-width: 1px) {
+    .respondat-nick {
+        display:block;
+        order:2;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .respondat-nick {
+        display:block;
+        order:2;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .respondat-nick {
+        display:inline;
+        order:1;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .respondat-nick {
+        display:inline;
+        order:1;
+        width:50%;
+    }
+  }
+
+    /* --- responsive banner text --- */
+
+  @media (min-width: 1px) {
+    .respondat-rainbow {
+    order:1;
+    display: block;
+    }
+    .c-rainbow__layer-font {
+        font-size: 5rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .respondat-rainbow {
+        display:block;
+        order:1;
+    }
+    .c-rainbow__layer-font {
+        font-size: 5rem;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .respondat-rainbow {
+        display:inline;
+        order:2;
+    }
+    .c-rainbow__layer-font {
+        font-size: 7rem;
+      }
+  }
+  
+  @media (min-width: 1200px) {
+    .respondat-rainbow {
+        display:inline;
+        order:2;
+    }
+    .c-rainbow__layer-font {
+        font-size: 7rem;
+      }
   }
