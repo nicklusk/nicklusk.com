@@ -5704,7 +5704,7 @@ h6 {
     .home-banner-01 .ht-text {
         background: rgba(71, 69, 228, 0.6);
         padding: 25px;
-        margin-top: -50px;
+        margin: -50px 0 0 25px;
     }
 }
 
@@ -6591,6 +6591,8 @@ h6 {
     background-image: url(../../static/img/BlueGridOne.gif);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center center;
+
     /* background-position: 50% 50%;
     top: 50%;
     transform: translateY(-50%); */
@@ -6610,19 +6612,20 @@ h6 {
 }
 
 .the-angels-have-the-phonebox {
-    background-image: url(../../static/img/OPX/phone-box.jpg);
+    background-image: url(../../static/img/OPX/phone-box-opt.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-color: #4745e4;
+    /* max-width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 32px;
-    padding-top: 350px;
+    padding-top: 350px; */
 }
 
 .mod-mt-75 {
@@ -6654,12 +6657,12 @@ h6 {
     --delay: 10;
     --color-black: #000;
     --color-white: #fff;
-    --color-orange: #5bfbd8;
-    --color-red: #00cffb;
-    --color-violet: #0097ff;
-    --color-blue: #4745e4;
-    --color-green: #022486;
-    --color-yellow: #00081C;
+    --color-aquamarine: #5bfbd8;
+    --color-brightTurquoise: #00cffb;
+    --color-azureRadiance: #0097ff;
+    --color-royalBlue: #4745e4;
+    --color-resolutionBlue: #022486;
+    --color-blueDiamond: #31037D;
     --color-foreground: var(--color-white);
     --font-name: Righteous;
   }
@@ -6671,6 +6674,7 @@ h6 {
     list-style: none;
     padding: 0;
     margin: 0;
+    z-index: 100;
   }
 
   @media (min-width: 576px) {
@@ -6748,23 +6752,23 @@ h6 {
   .c-rainbow__layer--white {
     --text-color: var(--color-white);
   }
-  .c-rainbow__layer--orange {
-    --text-color: var(--color-orange);
+  .c-rainbow__layer--aquamarine {
+    --text-color: var(--color-aquamarine);
   }
-  .c-rainbow__layer--red {
-    --text-color: var(--color-red);
+  .c-rainbow__layer--brightTurquoise {
+    --text-color: var(--color-brightTurquoise);
   }
-  .c-rainbow__layer--violet {
-    --text-color: var(--color-violet);
+  .c-rainbow__layer--azureRadiance {
+    --text-color: var(--color-azureRadiance);
   }
-  .c-rainbow__layer--blue {
-    --text-color: var(--color-blue);
+  .c-rainbow__layer--royalBlue {
+    --text-color: var(--color-royalBlue);
   }
-  .c-rainbow__layer--green {
-    --text-color: var(--color-green);
+  .c-rainbow__layer--resolutionBlue {
+    --text-color: var(--color-resolutionBlue);
   }
-  .c-rainbow__layer--yellow {
-    --text-color: var(--color-yellow);
+  .c-rainbow__layer--blueDiamond {
+    --text-color: var(--color-blueDiamond);
   }
   
   @keyframes rainbow {
@@ -6815,7 +6819,7 @@ h6 {
     display: block;
     }
     .c-rainbow__layer-font {
-        font-size: 5rem;
+        font-size: 3rem;
     }
   }
   

@@ -338,8 +338,12 @@
 		            speed: 200,
 		            loop:true,
 		            strings: [
-		              'Designer',
-		              'Developer'
+					  "UI/UX Enthusiast",
+					  "Web Developer",
+					  "Technologist",
+					  "Front-End Specialist",
+					  "Humdrum Guitarist",
+					  "Futurist"
 		            ],
 		            breakLines: false
 		        }); 
