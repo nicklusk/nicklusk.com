@@ -304,6 +304,11 @@ a.bright:hover {
     text-decoration: none;
     }
 
+a.contrast {
+    color: #fff;
+    font-weight: bold;
+}
+
 a[href^="tel:"]:before {
     content: "\260e";
     margin-right: 0.5em;
@@ -6592,6 +6597,7 @@ h6 {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    max-height: 1000px;
 
     /* background-position: 50% 50%;
     top: 50%;
@@ -6672,12 +6678,12 @@ h6 {
     position: relative;
     display: block;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 0 0 24px 0;
+    margin: auto;
     z-index: 100;
   }
 
-  @media (min-width: 576px) {
+  /* @media (min-width: 576px) {
     .c-rainbow__layer-font {
         font-size: 5rem;
     }
@@ -6699,7 +6705,7 @@ h6 {
     .c-rainbow__layer-font {
         font-size: 7rem;
       }
-  }
+  } */
 
   .c-rainbow__layer {
     font-family: 'Righteous';
@@ -6711,37 +6717,37 @@ h6 {
     animation: rainbow 1.5s ease-in-out infinite;
   }
   .c-rainbow__layer:nth-child(1) {
-    animation-delay: calc( 1 / var(--delay) * 1s);
+    animation-delay: calc( 1 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 1);
     z-index: -10;
   }
   .c-rainbow__layer:nth-child(2) {
-    animation-delay: calc( 2 / var(--delay) * 1s);
+    animation-delay: calc( 2 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 2);
     z-index: -20;
   }
   .c-rainbow__layer:nth-child(3) {
-    animation-delay: calc( 3 / var(--delay) * 1s);
+    animation-delay: calc( 3 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 3);
     z-index: -30;
   }
   .c-rainbow__layer:nth-child(4) {
-    animation-delay: calc( 4 / var(--delay) * 1s);
+    animation-delay: calc( 4 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 4);
     z-index: -40;
   }
   .c-rainbow__layer:nth-child(5) {
-    animation-delay: calc( 5 / var(--delay) * 1s);
+    animation-delay: calc( 5 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 5);
     z-index: -50;
   }
   .c-rainbow__layer:nth-child(6) {
-    animation-delay: calc( 6 / var(--delay) * 1s);
+    animation-delay: calc( 6 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 6);
     z-index: -60;
   }
   .c-rainbow__layer:nth-child(7) {
-    animation-delay: calc( 7 / var(--delay) * 1s);
+    animation-delay: calc( 7 / var(--delay) * 1.3s);
     left: calc(var(--axis-x) * 7);
     z-index: -70;
   }
@@ -6819,7 +6825,7 @@ h6 {
     display: block;
     }
     .c-rainbow__layer-font {
-        font-size: 3rem;
+        font-size: 3.48rem;
     }
   }
   
