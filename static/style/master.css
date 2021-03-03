@@ -39,13 +39,7 @@ COLOR PALATE
 */
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Mr+Dafoe);
-@import url(https://fonts.googleapis.com/css?family=Titillium+Web:900);
 @import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url(https://fonts.googleapis.com/css?family=Candal);
-@import url(https://fonts.googleapis.com/css?family=Permanent+Marker);
-@import url(https://fonts.googleapis.com/css?family=Monoton);
-
 /*----------------------------------
 * Buttons
 ----------------------------------*/
@@ -5781,7 +5775,7 @@ h6 {
 }
 
 .home-banner-01 .btn-bar {
-    padding-top: 25px;
+    padding: 25px 0 25px 0;
 }
 
 .home-banner-01 .btn-bar a {
@@ -6598,20 +6592,8 @@ h6 {
     background-size: cover;
     background-position: center center;
     max-height: 1000px;
-
-    /* background-position: 50% 50%;
-    top: 50%;
-    transform: translateY(-50%); */
 }
 
-.responsive-nick {
-    width: 100%;
-    height: auto;
-}
-
-/* .nick-threshold {
-    max-height: 1007px;
-} */
 .nick-pic {
     margin-left: -15px;
     background-position: left bottom;
@@ -6622,36 +6604,7 @@ h6 {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-color: #4745e4;
-    /* max-width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 32px;
-    padding-top: 350px; */
-}
-
-.mod-mt-75 {
-    margin-top: -75px;
-}
-
-.mod-ml-cop {
-    /* margin-left: 580px; */
-}
-
-@media (max-width: 991px) {
-    .mod-ml-cop {
-        /* margin-left: 580px; */
-    }
-}
-
-@media (max-width: 767px) {
-    .mod-ml-cop {
-        /* margin-left: 580px; */
-    }
 }
 
 @import url(https://fonts.googleapis.com/css?family=Righteous&amp;display=swap);
@@ -6683,35 +6636,10 @@ h6 {
     z-index: 100;
   }
 
-  /* @media (min-width: 576px) {
-    .c-rainbow__layer-font {
-        font-size: 5rem;
-    }
-  }
-  
-  @media (min-width: 768px) {
-    .c-rainbow__layer-font {
-        font-size: 5rem;
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .c-rainbow__layer-font {
-        font-size: 7rem;
-      }
-  }
-  
-  @media (min-width: 1200px) {
-    .c-rainbow__layer-font {
-        font-size: 7rem;
-      }
-  } */
-
   .c-rainbow__layer {
     font-family: 'Righteous';
     --text-color: var(--color-foreground);
     counter-increment: rainbow;
-    /* font-size: 7rem; */
     color: var(--text-color);
     text-shadow: -1px -1px 0 var(--color-black), 1px -1px 0 var(--color-black), -1px 1px 0 var(--color-black), 1px 1px 0 var(--color-black), 4px 4px 0 rgba(0, 0, 0, 0.2);
     animation: rainbow 1.5s ease-in-out infinite;
@@ -6788,17 +6716,18 @@ h6 {
 
     /* --- responsive banner picture --- */
 
-  @media (min-width: 1px) {
+  @media (max-width: 576px) {
     .respondat-nick {
         display:block;
         order:2;
+        margin-top: -260px;
     }
   }
 
   @media (min-width: 768px) {
     .respondat-nick {
         display:block;
-        order:2;
+        order:1;
     }
   }
   
@@ -6819,10 +6748,11 @@ h6 {
 
     /* --- responsive banner text --- */
 
-  @media (min-width: 1px) {
+  @media (max-width: 576px) {
     .respondat-rainbow {
     order:1;
     display: block;
+    padding-top: 200px;
     }
     .c-rainbow__layer-font {
         font-size: 3.48rem;
@@ -6832,7 +6762,8 @@ h6 {
   @media (min-width: 768px) {
     .respondat-rainbow {
         display:block;
-        order:1;
+        order:2;
+        padding-top: 200px;
     }
     .c-rainbow__layer-font {
         font-size: 5rem;
@@ -6843,6 +6774,7 @@ h6 {
     .respondat-rainbow {
         display:inline;
         order:2;
+        padding-top: 200px;
     }
     .c-rainbow__layer-font {
         font-size: 7rem;
@@ -6853,6 +6785,7 @@ h6 {
     .respondat-rainbow {
         display:inline;
         order:2;
+        padding-top: 200px;
     }
     .c-rainbow__layer-font {
         font-size: 7rem;
