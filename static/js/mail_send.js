@@ -1,4 +1,5 @@
-function send_mail() {
+
+ function send_mail() {
     var name = jQuery("#name").val();
     var email = jQuery("#email").val();
     var subject = jQuery("#subject").val();
@@ -13,7 +14,7 @@ function send_mail() {
         jQuery("#name").removeClass('invalid');
         jQuery("#val_user_name").html("");
     }
-
+  
     if (email == "") {
         jQuery("#email").addClass('invalid');
         jQuery("#val_user_email").html("Please Enter Email");
@@ -26,7 +27,7 @@ function send_mail() {
         jQuery("#email").removeClass('invalid');
         jQuery("#val_user_email").html("");
     }
-
+  
     if (subject == "") {
         jQuery("#subject").addClass('invalid');
         jQuery("#val_subject").html("Subject is Required");
@@ -43,22 +44,22 @@ function send_mail() {
         jQuery("#message").removeClass('invalid');
         jQuery("#val_message").html("");
     }
-
+  
     if (flag == 1) {
         return false;
     }
-
+  
     var data = {
         "name": name,
         "email": email,
         "subject": subject,
         "message": message,
     };
-
+  
     jQuery.ajax({
         type: "POST",
         crossOrigin: true,
-        url: "process_form.php",
+        url: "../../process_form.php",
         data: data,
         success: function(response) {
             if (response == '1') {
@@ -69,5 +70,5 @@ function send_mail() {
             }
         }
     });
-
-}
+  
+  };  

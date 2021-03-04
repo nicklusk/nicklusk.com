@@ -11,7 +11,7 @@ $mail_body = "Name : ".$name."<br>";
 $mail_body .= "Email : " . $email . "<br>";
 $mail_body .= "Subject : " . $subject . "<br>";
 $mail_body .= "Message : " . $message . "<br>";
-if(mail("youremail@mail.com","From: Contact Form Your name",$mail_body,$headers)){
+if(mail("r.nick.lusk@gmail.com","From: Contact Form Your name",$mail_body,$headers)){
     $thanks_mail_body = "Hello " . $name ."<br>";
     
     $thanks_mail_body .= "Hey! Thanks for your email!<br>";
@@ -27,3 +27,4 @@ if(mail("youremail@mail.com","From: Contact Form Your name",$mail_body,$headers)
 }else{
     echo "0";
 }
+

@@ -1019,44 +1019,42 @@
                     </div>
                 </div>
                 <!-- form -->
-                <div class="row justify-content-center ">
-                    <div class="col-lg-8 m-15px-tb ">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 m-15px-tb">
                         <div class="contact-form box-shadow">
-                            <h4 class="white-color font-alt m-20px-b ">Talk to Me</h4>
-                            <form id="contact-form " method="POST ">
-                                <div class="row ">
-                                    <div class="col-md-6 ">
-                                        <div class="form-group ">
-                                            <input name="Name " id="name " placeholder="Name * " class="form-control " type="text ">
+                            <h4 class="white-color font-alt m-20px-b">Talk to Me</h4>
+                            <form id="contact-form" method="POST">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input name="name" id="name" placeholder="Name *" class="form-control" type="text">
+                                            <span class="input-focus-effect theme-bg"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input name="Email" id="email" placeholder="Email *" class="form-control" type="email">
                                             <span class="input-focus-effect theme-bg "></span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 ">
-                                        <div class="form-group ">
-                                            <input name="Email " id="email " placeholder="Email * " class="form-control " type="email ">
-                                            <span class="input-focus-effect theme-bg "></span>
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input name="Subject" id="subject" placeholder="Subject *" class="form-control" type="text">
+                                            <span class="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>
-                                    <div class="col-12 ">
-                                        <div class="form-group ">
-                                            <input name="Subject " id="subject " placeholder="Subject * " class="form-control " type="text ">
-                                            <span class="input-focus-effect theme-bg "></span>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" placeholder="Your message *" rows="3" class="form-control"></textarea>
+                                            <span class="input-focus-effect theme-bg"></span>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 ">
-                                        <div class="form-group ">
-                                            <textarea name="message " id="message " placeholder="Your message * " rows="3 " class="form-control "></textarea>
-                                            <span class="input-focus-effect theme-bg "></span>
+                                    <div class="col-md-12">
+                                        <div class="send">
+                                            <button class="m-btn m-btn-theme" onclick="send_mail();" type="button" value="Send">send message</button>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12 ">
-                                        <div class="send ">
-                                            <button class="m-btn m-btn-theme " onclick="send_mail() " type="button " value="Send "> send message</button>
-                                        </div>
-                                        <span id="suce_message " class="text-success " style="display: none ">Message
-                                            Sent Successfully</span>
-                                        <span id="err_message " class="text-danger " style="display: none ">Message
-                                            Sending Failed</span>
+                                        <span id="suce_message" class="text-success" style="display: none">Message Sent Successfully</span>
+                                        <span id="err_message" class="text-danger" style="display: none">Message Sending Failed</span>
                                     </div>
                                 </div>
                             </form>
