@@ -11,13 +11,13 @@ $mail_body = "Name : ".$name."<br>";
 $mail_body .= "Email : " . $email . "<br>";
 $mail_body .= "Subject : " . $subject . "<br>";
 $mail_body .= "Message : " . $message . "<br>";
-if(mail("r.nick.lusk@gmail.com","From: Contact Form Your name",$mail_body,$headers)){
+if(mail("r.nick.lusk@gmail.com","From: Contact Form Nick Lusk",$mail_body,$headers)){
     $thanks_mail_body = "Hello " . $name ."<br>";
     
     $thanks_mail_body .= "Hey! Thanks for your email!<br>";
     $thanks_mail_body .= "I will get back to you soon.<br>";
     $thanks_mail_body .= "Thank You,<br>";
-    $thanks_mail_body .= "Your Name.";
+    $thanks_mail_body .= "Nick Lusk";
 
     if(mail($email,"Contact Request Notification Email",$thanks_mail_body,$headers)){
         echo "1";
