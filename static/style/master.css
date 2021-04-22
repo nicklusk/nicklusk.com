@@ -38,8 +38,7 @@ COLOR PALATE
 
 */
 
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
-@import url(https://fonts.googleapis.com/css?family=Righteous);
+
 /*----------------------------------
 * Buttons
 ----------------------------------*/
@@ -278,6 +277,7 @@ body {
 
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -317,6 +317,9 @@ img {
     max-width: 100%;
 }
 
+p {
+    padding: 0 0 12px 0;
+}
 .fa,
 .fab,
 .fal,
@@ -1101,7 +1104,7 @@ h6 {
 
 
 /* ----------------------
-*	transeition
+*	transition
 ---------------------------*/
 
 .transition {
@@ -6607,8 +6610,6 @@ h6 {
     background-color: #4745e4;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Righteous&amp;display=swap);
-
 :root {
     --color-background: #31037D;
     --axis-x: 1px;
@@ -6714,6 +6715,19 @@ h6 {
     }
   }
 
+  @media (max-width: 576px) {
+  .the-rainbow-room {
+    margin-top: 120px;
+  }
+}
+
+  @media (max-width: 768px) {
+  .the-rainbow-room {
+    margin-top: 120px;
+  }
+}
+
+
     /* --- responsive banner picture --- */
 
   @media (max-width: 576px) {
@@ -6791,3 +6805,4 @@ h6 {
         font-size: 7rem;
       }
   }
+

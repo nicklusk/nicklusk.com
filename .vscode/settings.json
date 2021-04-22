@@ -1,3 +1,4 @@
 {
-    "editor.maxTokenizationLineLength": 40000
+    "editor.maxTokenizationLineLength": 40000,
+    "python.pythonPath": "C:\\Users\\fearo\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
 }

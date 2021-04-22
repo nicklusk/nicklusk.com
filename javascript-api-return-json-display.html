@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article" lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M93MRM4');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYYNKLQGX1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZYYNKLQGX1');
+    </script> -->
+
+    <!-- metas -->
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Making an API call is a lot like skinning a cat, there is more than one way to do it. I am going to try and give examples both plentiful and diverse. I am not sure anyone could make a comprehensive list of methods, which is a testament to the unreasonably large number of front-end technologies that objectively do the same thing.">
+    <meta name="author" content="Nick Lusk">
+    <meta content="follow,index" name="robots">
+
+
+    <meta property="og:title" content="Several Ways JavaScript Can Get Data From An API">
+    <meta property="og:description" content="Making an API call is a lot like skinning a cat, there is more than one way to do it. I am going to try and give examples both plentiful and diverse. I am not sure anyone could make a comprehensive list of methods, which is a testament to the unreasonably large number of front-end technologies that objectively do the same thing.">
+    <meta property="og:image" content="https://nicklusk.com/static/img/OPX/api-article-tz.jpg">
+    <meta property="og:url" content="http://nicklusk.com/javascript-api-return-json-display.html">
+
+    <meta name="twitter:card" content="summary" />
+
+
+
+
+    <!-- title -->
+    <title>Nick Lusk - Several Ways JavaScript Can Get Data From An API</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- plugin CSS -->
+    <!-- theme css -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
+
+    <link href="static/min-prime.css" rel="stylesheet">
+    <link href="static/style/master.css" rel="stylesheet">
+
+</head>
+<!-- Body Start -->
+
+<body data-spy="scroll" data-target="#navbar-collapse-toggle" data-offset="70">
+    <a id="top"></a>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M93MRM4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <!-- page loading -->
+    <div id="loading">
+        <div class="load-circle"><span class="one"></span></div>
+    </div>
+    <!-- end page loading -->
+    <!-- Mobile Toggle -->
+    <div class="mob-header">
+        <div class="d-flex">
+            <div class="navbar-brand">
+                <a class="logo-text" href="index.html">
+                    Nick Lusk
+                </a>
+            </div>
+            <button class="toggler-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+    <!-- / -->
+    <header class="header-left" id="navbar-collapse-toggle">
+        <div class="navbar-brand">
+            <a class="logo-text" href="index.html">
+                Nick Lusk
+            </a>
+        </div>
+        <ul class="nav">
+            <li>
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-house-damage"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+    <!-- Main -->
+    <main class="main-left">
+        <section id="home" class="home-banner-01 bg-cover bg-left bg-no-repeat" style="background-image: url(static/img/sub-page-banner.gif);overflow: hidden; ">
+            <div class="container">
+                <div class="row align-items-top">
+                    <div class="col-sm align-self-center">
+                        <div class="ht-text">
+                            <div id="wrapper">                            
+                                <div class="row" style="vertical-align: top;">
+                                    <ul class="c-rainbow">
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--white">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--aquamarine">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--brightTurquoise">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--azureRadiance">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--royalBlue">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--resolutionBlue">NICK&nbsp;LUSK</li>
+                                        <li class="c-rainbow__layer c-rainbow__layer-font c-rainbow__layer--blueDiamond">NICK&nbsp;LUSK</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- about us -->
+                <section id="about" class="section">
+                    <div class="container">
+                        <div class="row sm-m-25px-b m-35px-b">
+                            <div class="col-md-12">
+                                <div class="section-title">
+                                <!-- content body -->
+
+                                    <h2 class="dark-color text-uppercase">Several Ways JavaScript Can Get Data From An API</h2>
+                                    <p>In simpler times the pages of a website were static files that just sat there, like pages in a book waiting to be turned. Wipe the mist out of your eyes because those days are gone. Either you are hitting a database or pulling various parts of a page from a file system or you are doing it the way it should be done by making an API call and building a page with the response.</p>
+                                    <p>Making an API call is a lot like skinning a cat, there is more than one way to do it. I am going to try and give examples both plentiful and diverse. I am not sure anyone could make a comprehensive list of methods, which is a testament to the unreasonably large number of front-end technologies that objectively do the same thing.</p>
+                                    <p><a href="https://jsonplaceholder.typicode.com/" target="_blank" alt="{JSON} Placeholder Free fake API for testing and prototyping." title="{JSON} Placeholder Free fake API for testing and prototyping.">JSONPlaceholder</a> is a free online REST API that is so good at its job I would be out of my gourd not to use it. Specifically, I’m going to use <a href="https://jsonplaceholder.typicode.com/todos" target="_blank" alt="{JSON} Placeholder Free fake API for testing and prototyping." title="{JSON} Placeholder Free fake API for testing and prototyping.">https://jsonplaceholder.typicode.com/todos</a>.</p>
+                                    <p>I have included just enough HTML around the JavaScript in each example for you to be able to copy and paste into your IDE and see results without having to figure anything out.</p>
+                                    <p>Make an API call, retrieve a value, write value to page. Several different ways. Starting now.</p>
+                                    
+                                    <h3 class="dark-color">XMLHttpRequest</h3>
+                                    <p class="codepen" data-height="465" data-theme-id="dark" data-default-tab="js,result" data-user="fearofmusic" data-slug-hash="WNRerrE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="XMLHttpRequest API Call - JSON to &amp;lt;table&amp;gt;">
+                                    <span>See the Pen <a href="https://codepen.io/fearofmusic/pen/WNRerrE">
+                                    XMLHttpRequest API Call - JSON to &lt;table&gt;</a> by Nick Lusk (<a href="https://codepen.io/fearofmusic">@fearofmusic</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <p><a href="https://codepen.io/fearofmusic/pen/WNRerrE" alt="XMLHttpRequest API Call - JSON to Table - Nick Lusk" title="XMLHttpRequest API Call - JSON to Table - Nick Lusk">View on Codepen.io</a></p>
+
+                                    <h3 class="dark-color">Fetch API</h3>
+                                    <p>Fetch really comes into town ready to do business with any method or API you can fling at it.  Fling being a distant cousin of fetch, of course. Let's take a look at the full list of all possible fetch options</p>
+                                   <code>let promise = fetch(url, {<br>
+                                    <div style="margin-left:24px;">
+                                    method: &quot;GET&quot;, // POST, PUT, DELETE, etc.<br>
+                                    headers: {<br>
+                                      // the content type header value is usually auto-set<br>
+                                      // depending on the request body<br>
+                                      &quot;Content-Type&quot;: &quot;text/plain;charset=UTF-8&quot;<br>
+                                    },<br>
+                                    body: undefined // string, FormData, Blob, BufferSource, or URLSearchParams<br>
+                                    referrer: &quot;about:client&quot;, // or &quot;&quot; to send no Referer header,
+                                    // or an url from the current origin<br>
+                                    referrerPolicy: &quot;no-referrer-when-downgrade&quot;, // no-referrer, origin, same-origin...<br>
+                                    mode: &quot;cors&quot;, // same-origin, no-cors<br>
+                                    credentials: &quot;same-origin&quot;, // omit, include<br>
+                                    cache: &quot;default&quot;, // no-store, reload, no-cache, force-cache, or only-if-cached<br>
+                                    redirect: &quot;follow&quot;, // manual, error<br>
+                                    integrity: &quot;&quot;, // a hash, like &quot;sha256-abcdef1234567890&quot;<br>
+                                    keepalive: false, // true<br>
+                                    signal: undefined, // AbortController to abort request<br>
+                                    window: window // null<br>
+                                  });<br /><br /></div></code>
+                                  <p>So let's get started with the first fetch example.</p>
+                                    <p class="codepen" data-height="465" data-theme-id="dark" data-default-tab="js,result" data-user="fearofmusic" data-slug-hash="bGgbENq" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Fetch API Call - JSON to &amp;lt;table&amp;gt;">
+                                    <span>See the Pen <a href="https://codepen.io/fearofmusic/pen/bGgbENq">
+                                    Fetch API Call - JSON to &lt;table&gt;</a> by Nick Lusk (<a href="https://codepen.io/fearofmusic">@fearofmusic</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <p><a href="https://codepen.io/fearofmusic/pen/bGgbENq" alt="Fetch API Call - JSON to Table - Nick Lusk" title="Fetch API Call - JSON to Table - Nick Lusk">View on Codepen.io</a></p>
+
+                                    <h3 class="dark-color">Fetch with Async and Await</h3>
+                                    <p>I know, the previous example actually has async and await in it.  Well here's another one, await for it.</p>
+                                    <p class="codepen" data-height="465" data-theme-id="dark" data-default-tab="js,result" data-user="fearofmusic" data-slug-hash="QWdjwXG" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Fetch with Async and Await - JSON to &amp;lt;table&amp;gt; - by Nick Lusk">
+                                    <span>See the Pen <a href="https://codepen.io/fearofmusic/pen/QWdjwXG">
+                                    Fetch with Async and Await - JSON to &lt;table&gt; - by Nick Lusk</a> by Nick Lusk (<a href="https://codepen.io/fearofmusic">@fearofmusic</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <p><a href="https://codepen.io/fearofmusic/pen/QWdjwXG" alt="Fetch with Async and Await - JSON to <table> - by Nick Lusk" title="Fetch with Async and Await - JSON to <table> - by Nick Lusk">View on Codepen.io</a></p>
+
+                                    <h3 class="dark-color">jQuery ajax method</h3>
+                                    <p>jQuery has a specific method called getJson() which is shorthand for an .ajax() call that has the dataType json.  So use that, maybe.  Maybe one of them has better performance, I don't know.</p>
+                                    <p class="codepen" data-height="465" data-theme-id="dark" data-default-tab="js,result" data-user="fearofmusic" data-slug-hash="xxgxBQp" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="jQuery ajax API call - JSON to &amp;lt;table&amp;gt;">
+                                    <span>See the Pen <a href="https://codepen.io/fearofmusic/pen/xxgxBQp">
+                                    jQuery ajax API call - JSON to &lt;table&gt;</a> by Nick Lusk (<a href="https://codepen.io/fearofmusic">@fearofmusic</a>)
+                                    on <a href="https://codepen.io">CodePen</a>.</span>
+                                    </p>
+                                    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                    <p><a href="https://codepen.io/fearofmusic/pen/xxgxBQp" alt="jQuery ajax API call - JSON to Table - Nick Lusk" title="jQuery ajax API call - JSON to Table - Nick Lusk">View on Codepen.io</a></p>
+
+                                    <h3 class="dark-color">Axios</h3>
+                                    <p>Axios is a library for making HTTP requests. Specifically, it makes promise based requests. It also works in both original JavaScript and most of your fancy ones like React. It might work in all of them, I'm honestly not sure. We are going to employ it wrapped in the warm arms of plain JavaScript.</p>
+                                    <p>Doing it the quaint way means we have to include it in the HTML. Like you would with jQuery. Use the CDN.</p>
+                                    <code>&lt;script src='https://unpkg.com/axios/dist/axios.min.js'&gt;&lt;/script&gt;</code>
+                                    <br /><br />
+                                    <p>Go buy yourself a hat...and get ready to hold on to it because we are changing things up this round.  Instead of todo items, this time we're grabbing users. Not only that, we're only displaying a couple of items per user and combining them in a novel way. We get the name, their hometown, and their catch phrase. Neat. Added some sophistication to the style, too.</p>
+                                    <p class="codepen" data-height="465" data-theme-id="dark" data-default-tab="js,result" data-user="fearofmusic" data-slug-hash="GRrodgQ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Axios API Call - JSON to &amp;lt;ol&amp;gt;">
+                                        <span>See the Pen <a href="https://codepen.io/fearofmusic/pen/GRrodgQ">
+                                        Axios API Call - JSON to &lt;ol&gt;</a> by Nick Lusk (<a href="https://codepen.io/fearofmusic">@fearofmusic</a>)
+                                        on <a href="https://codepen.io">CodePen</a>.</span>
+                                      </p>
+                                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                                      <p><a href="https://codepen.io/fearofmusic/pen/GRrodgQ" alt="Axios API Call - JSON to <ol> - by Nick Lusk" title="Axios API Call - JSON to <ol> - by Nick Lusk">View on Codepen.io</a></p>
+
+
+                                        <h3 class="dark-color">An Actual React App Using Axios</h3>
+                                        <p>For the big finale I found an open API that gives advice.  I used the search query to get advice on "people." This is what I found.</p>
+                                        <iframe src="https://codesandbox.io/embed/get-requests-from-json-using-axios-forked-0zf6b?fontsize=14&hidenavigation=1&theme=dark"
+                                        style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+                                        title="React-Axios-GET-JSON-render-list"
+                                        allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+                                        sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+                                      ></iframe>
+
+                                <!-- end content body -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- end about us -->
+    </main>
+    <!-- main end -->
+    <!-- Footer-->
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 m-10px-tb">
+                    <div class="nav justify-content-center justify-content-md-start">
+                        <a href="https://www.facebook.com/thefearofmusic"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/NickLusk3"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/afearofmusic/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/nicklusk/en"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.pinterest.com/thefearofmusic"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 m-10px-tb text-center text-md-right">
+                    <p>© 2021 copyright all right reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer End -->
+
+    <!-- end body -->
+    <script src="static/js/cat.js"></script>
+    <script>
+        window.console = window.console || function(t) {};
+    </script>
+    <script>
+        if (document.location.search.match(/type=embed/gi)) {
+          window.parent.postMessage("resize", "*");
+        }
+    </script>
+</body>
+
+</html>
